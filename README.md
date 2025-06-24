@@ -82,6 +82,23 @@ A responsive web application that helps book lovers manage, review, and track th
 
 ---
 
+## 🚀 Run Locally
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository**
+
+git clone:https://github.com/samiulalim-dev/bookshelf-web-app-client.git
+
+2. **Navigate to the project directory**
+- **cd bookshelf-web-app**
+3. **Install dependencies**
+- **npm install**
+4. **Start the development server**
+- **npm run dev**
+4. **Open your browser and visit**
+- **http://localhost:5173**
+
 ## 📦 NPM Packages Used
 
 ```bash
