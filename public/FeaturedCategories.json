@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Fiction",
+    "image": "https://i.postimg.cc/g0xhKpj1/fiction.png",
+    "description": "Imaginative storytelling with fictional characters."
+  },
+  {
+    "name": "Non-Fiction",
+    "image": "https://i.postimg.cc/0Q8sskSB/non-fiction.jpg",
+    "description": "Real facts, biographies, and educational materials."
+  },
+  {
+    "name": "Fantasy",
+    "image": "https://i.postimg.cc/zfV7PBmw/fantasy.jpg",
+    "description": "Magical worlds and mythical adventures."
+  },
+  {
+    "name": "Romance",
+    "image": "https://i.postimg.cc/xCx2V5tJ/romance.webp",
+    "description": "Heartwarming love stories and emotional journeys."
+  },
+  {
+    "name": "Science Fiction",
+    "image": "https://i.postimg.cc/XNk35f4t/science.webp",
+    "description": "Futuristic tales, aliens, and advanced tech."
+  },
+  {
+    "name": "Biography",
+    "image": "https://i.postimg.cc/N0sRg7GY/biography.jpg",
+    "description": "Life stories of famous and inspirational people."
+  }
+]
