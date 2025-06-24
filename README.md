@@ -4,7 +4,7 @@ A responsive web application that helps book lovers manage, review, and track th
 
 ## 🔗 Live Site
 
-[👉 Click to Visit Virtual Bookshelf](http://localhost:5173/)
+[👉 Click to Visit Virtual Bookshelf](https://bookshelf-web-apps.netlify.app/)
 
 ---
 
