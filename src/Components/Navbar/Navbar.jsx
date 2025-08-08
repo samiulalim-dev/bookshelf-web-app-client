@@ -62,7 +62,16 @@ const Navbar = () => {
                   Bookshelf
                 </NavLink>
               </li>
-
+              <li>
+                <NavLink
+                  to="/aboutUs"
+                  className={({ isActive }) =>
+                    isActive ? "text-indigo-700" : "text-black"
+                  }
+                >
+                  About Us
+                </NavLink>
+              </li>
               {users && (
                 <>
                   <li>
@@ -131,7 +140,16 @@ const Navbar = () => {
                 Bookshelf
               </NavLink>
             </li>
-
+            <li>
+              <NavLink
+                to="/aboutUs"
+                className={({ isActive }) =>
+                  isActive ? "text-indigo-700" : "text-black"
+                }
+              >
+                About Us
+              </NavLink>
+            </li>
             {users && (
               <>
                 <li>
