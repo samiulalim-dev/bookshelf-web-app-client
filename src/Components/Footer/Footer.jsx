@@ -10,7 +10,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className="bg-base-300 text-base-content mt-16">
+    <footer className="bg-base-300 text-base-content">
       <div className="container mx-auto px-4 py-10 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
         <div className="space-y-2">
           <Link className="flex items-center gap-1" to="/">

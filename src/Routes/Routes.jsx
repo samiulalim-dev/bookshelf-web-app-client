@@ -13,6 +13,7 @@ import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import Loading from "../Components/Loading/Loading";
 import UpdateBook from "../Pages/UpdateBook/UpdateBook";
 import SeeBooks from "../Pages/SeeBooks/SeeBooks";
+import About from "../Components/AboutUs/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -32,6 +33,7 @@ export const router = createBrowserRouter([
           fetch("https://bookshelf-web-app-server.vercel.app/books"),
         hydrateFallbackElement: <Loading></Loading>,
       },
+
       {
         path: "/logIn",
         Component: LogIn,

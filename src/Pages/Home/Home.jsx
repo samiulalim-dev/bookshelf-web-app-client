@@ -4,24 +4,28 @@ import PopularBooks from "../../Components/PopularBooks/PopularBooks";
 import FeaturedCategories from "../../Components/FeaturedCategories/FeaturedCategories";
 import UserTestimonials from "../../Components/UserTestimonials/UserTestimonials";
 import UpcomingBookEvents from "../../Components/UpcomingBookEvents/UpcomingBookEvents";
+import TopAuthors from "../../Components/TopAuthors/TopAuthors";
 
 const Home = () => {
   return (
-    <div>
+    <div className=" ">
       <div>
         <Banner></Banner>
       </div>
       <div>
-        <PopularBooks></PopularBooks>
-      </div>
-      <div>
-        <FeaturedCategories></FeaturedCategories>
-      </div>
-      <div>
-        <UserTestimonials></UserTestimonials>
-      </div>
-      <div>
-        <UpcomingBookEvents></UpcomingBookEvents>
+        <div>
+          <PopularBooks></PopularBooks>
+        </div>
+        <div>
+          <FeaturedCategories></FeaturedCategories>
+        </div>
+        <div>
+          <UserTestimonials></UserTestimonials>
+        </div>
+
+        <div>
+          <UpcomingBookEvents></UpcomingBookEvents>
+        </div>
       </div>
     </div>
   );

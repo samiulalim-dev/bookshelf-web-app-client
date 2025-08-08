@@ -16,7 +16,7 @@ const UpcomingBookEvents = () => {
       });
   }, []);
   return (
-    <section className="py-12 w-11/12 mx-auto ">
+    <section className="py-12  md:pb-20 w-11/12 mx-auto ">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-14 ">
         📅 Upcoming Book Events
       </h2>

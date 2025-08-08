@@ -62,6 +62,7 @@ const Navbar = () => {
                   Bookshelf
                 </NavLink>
               </li>
+
               {users && (
                 <>
                   <li>
@@ -130,6 +131,7 @@ const Navbar = () => {
                 Bookshelf
               </NavLink>
             </li>
+
             {users && (
               <>
                 <li>

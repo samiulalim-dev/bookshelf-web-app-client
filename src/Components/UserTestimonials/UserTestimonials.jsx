@@ -15,7 +15,7 @@ const UserTestimonials = () => {
   }, []);
 
   return (
-    <div className="py-12 bg-base-200">
+    <div className="py-12 ">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 ">
         What Readers Say
       </h2>
