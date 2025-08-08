@@ -12,7 +12,7 @@ const Home = () => {
       <div>
         <Banner></Banner>
       </div>
-      <div>
+      <div className=" bg-base-200">
         <div>
           <PopularBooks></PopularBooks>
         </div>
@@ -22,7 +22,6 @@ const Home = () => {
         <div>
           <UserTestimonials></UserTestimonials>
         </div>
-
         <div>
           <UpcomingBookEvents></UpcomingBookEvents>
         </div>
