@@ -23,6 +23,9 @@ const Home = () => {
           <UserTestimonials></UserTestimonials>
         </div>
         <div>
+          <TopAuthors></TopAuthors>
+        </div>
+        <div>
           <UpcomingBookEvents></UpcomingBookEvents>
         </div>
       </div>
