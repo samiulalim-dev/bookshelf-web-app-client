@@ -13,7 +13,7 @@ const Roots = () => {
   return (
     <div>
       {/* header */}
-      <div className="sticky top-0 left-0 right-0 z-50">
+      <div className="sticky   top-0 left-0 right-0 z-50">
         <Navbar></Navbar>
       </div>
       {/* main */}

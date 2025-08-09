@@ -14,7 +14,7 @@ import thirdSlider from "../../assets/slider-3.jpg";
 
 const Banner = () => {
   return (
-    <div className=" border-t-5 border-white border-dashed ">
+    <div className="  ">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Autoplay]}

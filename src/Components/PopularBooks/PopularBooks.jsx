@@ -17,7 +17,7 @@ const PopularBooks = () => {
       });
   }, []);
   return (
-    <div className="w-11/12 mx-auto py-12">
+    <div className="w-11/12 data-theme:bg-amber-200 mx-auto py-12">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 ">
         Popular Books
       </h2>

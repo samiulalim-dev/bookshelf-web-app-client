@@ -3,6 +3,7 @@ import { FaBookOpen, FaSignOutAlt } from "react-icons/fa";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { toast } from "react-toastify";
+import ThemeToggle from "../ThemeToogle/ThemeToogle";
 
 const Navbar = () => {
   const { users, signOutUser } = use(AuthContext);
@@ -17,11 +18,15 @@ const Navbar = () => {
       });
   };
   return (
-    <div className="bg-base-100 py-2 shadow-sm">
-      <div className="navbar w-11/12 mx-auto ">
+    <div className=" bg-gradient-to-r from-purple-300  via-indigo-300 to-sky-200  shadow-lg py-2 ">
+      <div className="navbar sm:w-11/12 sm:mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn pl-0 btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -46,7 +51,7 @@ const Navbar = () => {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-700" : "text-black"
+                    isActive ? "text-indigo-700 underline" : ""
                   }
                 >
                   Home
@@ -56,7 +61,7 @@ const Navbar = () => {
                 <NavLink
                   to="/Bookshelf"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-700" : "text-black"
+                    isActive ? "text-indigo-700 underline" : ""
                   }
                 >
                   Bookshelf
@@ -66,7 +71,7 @@ const Navbar = () => {
                 <NavLink
                   to="/aboutUs"
                   className={({ isActive }) =>
-                    isActive ? "text-indigo-700" : "text-black"
+                    isActive ? "text-indigo-700 underline" : ""
                   }
                 >
                   About Us
@@ -78,7 +83,7 @@ const Navbar = () => {
                     <NavLink
                       to="/myBooks"
                       className={({ isActive }) =>
-                        isActive ? "text-indigo-700" : "text-black"
+                        isActive ? "text-indigo-700 underline" : ""
                       }
                     >
                       My Books
@@ -88,7 +93,7 @@ const Navbar = () => {
                     <NavLink
                       to="/addBooks"
                       className={({ isActive }) =>
-                        isActive ? "text-indigo-700" : "text-black"
+                        isActive ? "text-indigo-700 underline" : ""
                       }
                     >
                       Add Books
@@ -98,7 +103,7 @@ const Navbar = () => {
                     <NavLink
                       to="/profile"
                       className={({ isActive }) =>
-                        isActive ? "text-indigo-700" : "text-black"
+                        isActive ? "text-indigo-700 underline" : ""
                       }
                     >
                       Profile
@@ -109,7 +114,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link className="flex items-center gap-1" to="/">
-            <span className=" text-4xl md:text-5xl   text-purple-600">
+            <span className=" text-4xl md:text-5xl  text-purple-600 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] ">
               {" "}
               <FaBookOpen></FaBookOpen>{" "}
             </span>
@@ -124,7 +129,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-700" : "text-black"
+                  isActive ? "text-indigo-700 underline" : ""
                 }
               >
                 Home
@@ -134,7 +139,7 @@ const Navbar = () => {
               <NavLink
                 to="/Bookshelf"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-700" : "text-black"
+                  isActive ? "text-indigo-700 underline" : ""
                 }
               >
                 Bookshelf
@@ -144,7 +149,7 @@ const Navbar = () => {
               <NavLink
                 to="/aboutUs"
                 className={({ isActive }) =>
-                  isActive ? "text-indigo-700" : "text-black"
+                  isActive ? "text-indigo-700 underline" : ""
                 }
               >
                 About Us
@@ -156,7 +161,7 @@ const Navbar = () => {
                   <NavLink
                     to="/myBooks"
                     className={({ isActive }) =>
-                      isActive ? "text-indigo-700" : "text-black"
+                      isActive ? "text-indigo-700 underline" : ""
                     }
                   >
                     My Books
@@ -166,7 +171,7 @@ const Navbar = () => {
                   <NavLink
                     to="/addBooks"
                     className={({ isActive }) =>
-                      isActive ? "text-indigo-700" : "text-black"
+                      isActive ? "text-indigo-700 underline" : ""
                     }
                   >
                     Add Books
@@ -176,7 +181,7 @@ const Navbar = () => {
                   <NavLink
                     to="/profile"
                     className={({ isActive }) =>
-                      isActive ? "text-indigo-700" : "text-black"
+                      isActive ? "text-indigo-700 underline" : ""
                     }
                   >
                     Profile
@@ -186,7 +191,10 @@ const Navbar = () => {
             )}
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex items-center ">
+          <div className=" ">
+            <ThemeToggle></ThemeToggle>
+          </div>
           {users ? (
             <button
               onClick={handleLogoutBtn}
@@ -195,7 +203,10 @@ const Navbar = () => {
               <FaSignOutAlt></FaSignOutAlt> Logout
             </button>
           ) : (
-            <Link to="/logIn" className="btn bg-purple-600 text-white">
+            <Link
+              to="/logIn"
+              className="btn btn-outline border-2 border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white"
+            >
               Login
             </Link>
           )}
