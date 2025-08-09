@@ -165,24 +165,28 @@ const ViewDetails = () => {
               <h2 className="text-3xl font-bold text-indigo-700">
                 {book.title}
               </h2>
-              <p>
-                <span className="font-semibold">Author:</span> {book.author}
-              </p>
-              <p>
-                <span className="font-semibold">Total Pages:</span> {book.pages}
-              </p>
-              <p>
-                <span className="font-semibold">Category:</span> {book.category}
-              </p>
-              <p>
-                <span className="font-semibold">Reading Status:</span>{" "}
-                {book.readingStatus}
-              </p>
-              <p>
-                <span className="font-semibold">Upvotes:</span> {book.upvote}
-              </p>
+              <div className=" text-black">
+                <p>
+                  <span className="font-semibold">Author:</span> {book.author}
+                </p>
+                <p>
+                  <span className="font-semibold">Total Pages:</span>{" "}
+                  {book.pages}
+                </p>
+                <p>
+                  <span className="font-semibold">Category:</span>{" "}
+                  {book.category}
+                </p>
+                <p>
+                  <span className="font-semibold">Reading Status:</span>{" "}
+                  {book.readingStatus}
+                </p>
+                <p>
+                  <span className="font-semibold">Upvotes:</span> {book.upvote}
+                </p>
+              </div>
               <p className="mt-4">
-                <span className="font-semibold">Overview:</span>
+                <span className="font-semibold text-black">Overview:</span>
               </p>
               <p className="text-gray-700">{book.overview}</p>
               <hr />
@@ -203,10 +207,10 @@ const ViewDetails = () => {
           </div>
           {/* tracker section */}
           {/* Step Tracker */}
-          <div className="flex items-center justify-between w-full mt-10 max-w-md mx-auto">
-            <div className="flex flex-col items-center">
+          <div className="flex items-center text-black justify-between w-full mt-10 max-w-md mx-auto">
+            <div className="flex flex-col  items-center">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                className={`w-8 h-8 rounded-full  flex items-center justify-center ${
                   book.readingStatus === "Want To Read" ||
                   book.readingStatus === "Reading" ||
                   book.readingStatus === "Read"
@@ -285,7 +289,9 @@ const ViewDetails = () => {
           {/* Review Section */}
 
           <div className="mt-10">
-            <h2 className="text-2xl font-semibold mb-4">💬 Reviews</h2>
+            <h2 className="text-2xl text-black font-semibold mb-4">
+              💬 Reviews
+            </h2>
             {reviews.length === 0 && <p>No reviews yet.</p>}
 
             <ul className="">

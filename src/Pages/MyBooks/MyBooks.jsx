@@ -61,7 +61,7 @@ const MyBooks = () => {
               {myBooks.map((book) => (
                 <div
                   key={book._id}
-                  className="bg-white shadow-md rounded-lg overflow-hidden border flex flex-col justify-between"
+                  className="bg-white text-black shadow-md rounded-lg overflow-hidden flex flex-col justify-between"
                 >
                   <img
                     src={book.photo}
@@ -86,7 +86,7 @@ const MyBooks = () => {
                   <div className="p-4 flex justify-between gap-2">
                     <Link
                       to={`/updateBook/${book._id}`}
-                      className=" btn bg-purple-600 text-white"
+                      className=" px-4 py-2 rounded-sm inline-block bg-purple-600 text-white"
                     >
                       Update Book
                     </Link>

@@ -65,7 +65,7 @@ const Profile = () => {
         <div className="mt-8 grid md:grid-cols-2 gap-8 items-center">
           <div>
             <h3 className="text-xl font-semibold mb-4">Bookshelf Summary</h3>
-            <ul className=" text-gray-700 space-y-2">
+            <ul className="  space-y-2">
               <li>Total Books: {bookSummary.length}</li>
               <h2 className=" text-md font-semibold">Books by Category</h2>
               {categoryArray.map((cat, index) => (

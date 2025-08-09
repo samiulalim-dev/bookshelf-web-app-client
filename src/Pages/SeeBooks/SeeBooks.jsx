@@ -21,9 +21,12 @@ const SeeBooks = () => {
         <Loading></Loading>
       ) : (
         <div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
+          <div className=" grid  grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3">
             {categoryData.map((cat) => (
-              <div key={cat._id} className="card bg-base-100  shadow-sm">
+              <div
+                key={cat._id}
+                className="card bg-white text-black  shadow-sm"
+              >
                 <figure>
                   <img
                     className=" h-60 w-full object-cover"
@@ -46,7 +49,7 @@ const SeeBooks = () => {
                   <div className="card-actions justify-end">
                     <Link
                       to={`/books/${cat._id}`}
-                      className="btn bg-purple-600 text-white"
+                      className="bg-purple-600 text-white px-4 py-2 rounded-sm inline-block"
                     >
                       View Details
                     </Link>

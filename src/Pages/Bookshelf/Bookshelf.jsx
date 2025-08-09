@@ -93,7 +93,7 @@ const Bookshelf = () => {
             {books.map((book) => (
               <div
                 key={book._id}
-                className="card shadow-xl bg-base-100 hover:shadow-2xl transition"
+                className="card shadow-xl bg-white text-black hover:shadow-2xl transition"
               >
                 <figure className="h-60 overflow-hidden">
                   <img
@@ -112,7 +112,7 @@ const Bookshelf = () => {
                     <div>
                       <Link
                         to={`/books/${book._id}`}
-                        className=" btn bg-purple-600 text-white"
+                        className="  px-4 py-2 rounded-sm inline-block bg-purple-600 text-white"
                       >
                         View Details
                       </Link>
