@@ -17,7 +17,7 @@ const PopularBooks = () => {
       });
   }, []);
   return (
-    <div className="w-11/12 data-theme:bg-amber-200 mx-auto py-12">
+    <div className="w-11/12  mx-auto py-12">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 ">
         Popular Books
       </h2>
@@ -29,28 +29,33 @@ const PopularBooks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className=" grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3"
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:grid-cols-3"
         >
           {popular.map((pop) => (
-            <div key={pop._id} className="card bg-base-100  shadow-sm">
-              <figure>
+            <div key={pop._id} className="card bg-white text-black shadow-sm">
+              <figure className="h-60 overflow-hidden">
                 <img
-                  className=" h-60 w-full object-cover"
+                  className="h-full w-full object-cover"
                   src={pop.photo}
-                  alt="Shoes"
+                  alt={pop.title}
                 />
               </figure>
-              <div className="card-body">
+              <div className="card-body flex flex-col flex-grow">
                 <h2 className="card-title">{pop.title}</h2>
                 <p>
-                  upvote:<span>{pop.upvote}</span>
+                  upvote: <span>{pop.upvote}</span>
                 </p>
 
-                <p>{pop.overview}</p>
-                <div className="card-actions justify-end">
+                <p className="flex-grow overflow-hidden text-ellipsis">
+                  {pop.overview.length > 100
+                    ? pop.overview.slice(0, 100) + "..."
+                    : pop.overview}
+                </p>
+
+                <div className="card-actions justify-end mt-auto">
                   <Link
                     to={`/books/${pop._id}`}
-                    className="btn bg-purple-600 text-white"
+                    className="bg-purple-600 text-white px-4 py-2 rounded-md inline-block"
                   >
                     View Details
                   </Link>
