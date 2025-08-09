@@ -40,8 +40,8 @@ const FeaturedCategories = () => {
   // }, []);
 
   return (
-    <section className=" w-11/12 mx-auto py-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10  ">
+    <section className="w-11/12 mx-auto py-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 ">
         Featured Categories
       </h2>
 
@@ -53,26 +53,33 @@ const FeaturedCategories = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
         >
           {categoryArray.map((cat, index) => (
             <div
               key={index}
-              className="bg-base-200 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transform transition-transform duration-300 p-8 flex flex-col justify-between"
             >
-              <div className="p-5">
-                <h3 className="text-xl font-semibold mb-2">{cat.category}</h3>
-                <div className=" flex items-center">
-                  <span className=" text-lg font-medium">total books</span>:
-                  <span className=" text-2xl font-bold"> {cat.count}</span>
+              <div>
+                <h3 className="text-2xl font-semibold mb-4 text-purple-700 dark:text-purple-400">
+                  {cat.category}
+                </h3>
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="text-lg font-medium text-gray-700 dark:text-gray-300">
+                    Total Books:
+                  </span>
+                  <span className="text-3xl font-bold text-purple-600 dark:text-purple-500">
+                    {cat.count}
+                  </span>
                 </div>
-                <Link
-                  to={`/category/${cat.category}`}
-                  className=" btn mt-2 bg-purple-600 text-white"
-                >
-                  See Books
-                </Link>
               </div>
+
+              <Link
+                to={`/category/${cat.category}`}
+                className=" bg-purple-600 hover:bg-purple-700 text-white rounded-sm px-4 py-2 self-start transition-colors duration-300"
+              >
+                See Books
+              </Link>
             </div>
           ))}
         </motion.div>

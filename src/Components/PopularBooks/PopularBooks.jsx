@@ -55,7 +55,7 @@ const PopularBooks = () => {
                 <div className="card-actions justify-end mt-auto">
                   <Link
                     to={`/books/${pop._id}`}
-                    className="bg-purple-600 text-white px-4 py-2 rounded-md inline-block"
+                    className="bg-purple-600 text-white px-4 py-2 rounded-sm inline-block"
                   >
                     View Details
                   </Link>

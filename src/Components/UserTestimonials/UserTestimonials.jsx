@@ -38,7 +38,9 @@ const UserTestimonials = () => {
                 alt={testimonial.name}
                 className="w-20 h-20 rounded-full mb-4 border-2 border-indigo-500"
               />
-              <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
+              <h3 className="text-xl text-black font-semibold mb-2">
+                {testimonial.name}
+              </h3>
               <p className="text-sm text-gray-600 mb-4">{testimonial.review}</p>
               <div className="flex gap-1 ">⭐⭐⭐⭐⭐</div>
             </motion.div>
